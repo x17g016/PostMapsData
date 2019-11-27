@@ -1,13 +1,9 @@
 package com.example.postmapsdata
 
-data class post(
-    val likeid: String,
-    val postid: String,
-    val userid: String,
-    val name: String,
-    val text: String,
-    val date: String,
-    val image: String
+data class PostList(
+    val maplat: Double,
+    val mapslng: Double,
+    val imagepath: String
 )
 
 data class like(
