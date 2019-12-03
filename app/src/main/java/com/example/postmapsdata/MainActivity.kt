@@ -72,22 +72,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                 var postList = mutableListOf<PostList>()
                 val listType = object : TypeToken<List<MapsDataClassList>>() {}.type
-                val postData = Gson().fromJson<List<MapsDataClassList>>(result, listType)//error
-                messageView.text = postData.toString()
+                val postData = Gson().fromJson<List<MapsDataClassList>>(result, listType)
+
                 for (i in postData) {
                     postList.add(
                         PostList(
-                            i.mapsLat,
-                            i.mapsLng,
-                            i.imagePath)
+                            i.imgPath,
+                            i.imgLat,
+                            i.imgLng
+                        )
                     )
-
-                    Log.d("debug",i.mapsLat.toString())
-
                 }
-
-                messageView.text = postList.toString()
-
+                messageView.text = postList[1].imgpath
             } catch (e: Exception) {
 
             }

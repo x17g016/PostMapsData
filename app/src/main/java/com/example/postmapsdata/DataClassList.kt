@@ -1,9 +1,9 @@
 package com.example.postmapsdata
 
 data class PostList(
-    val maplat: Double,
-    val mapslng: Double,
-    val imagepath: String
+    val imgpath: String,
+    val imglat: Double,
+    val imglng: Double
 )
 
 data class like(
@@ -41,7 +41,7 @@ data class SinginDataClassList (
 )
 
 data class MapsDataClassList (
-    val mapsLat: Double,
-    val mapsLng: Double,
-    val imagePath: String
+    val imgPath: String,
+    val imgLat: Double,
+    val imgLng: Double
 )
