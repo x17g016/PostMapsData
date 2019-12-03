@@ -1,6 +1,6 @@
 package com.example.postmapsdata
 
-data class PostList(
+data class MapsList(
     val imgpath: String,
     val imglat: Double,
     val imglng: Double

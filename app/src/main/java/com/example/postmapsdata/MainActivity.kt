@@ -1,10 +1,8 @@
 package com.example.postmapsdata
 
-
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -14,7 +12,7 @@ import java.io.IOException
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.*
-import kotlin.math.log
+
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -70,13 +68,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             try {
                 val messageView: TextView = findViewById(R.id.textview)
 
-                var postList = mutableListOf<PostList>()
+                var postList = mutableListOf<MapsList>()
                 val listType = object : TypeToken<List<MapsDataClassList>>() {}.type
                 val postData = Gson().fromJson<List<MapsDataClassList>>(result, listType)
 
                 for (i in postData) {
                     postList.add(
-                        PostList(
+                        MapsList(
                             i.imgPath,
                             i.imgLat,
                             i.imgLng
